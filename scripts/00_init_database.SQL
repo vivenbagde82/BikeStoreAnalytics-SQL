@@ -3,9 +3,9 @@
 Creating database and Schemas
 
 Script Purpose: 
-This script creates a new databse named 'BikeStoreAnalytics' after checking if it already exists.
-If the database exists, it is dropped and recreated. 
-Additionally, the script creates tables in the gold schema.
+	This script creates a new databse named 'BikeStoreAnalytics' after checking if it already exists.
+	If the database exists, it is dropped and recreated. 
+	Additionally, the script creates tables in the gold schema.
 
 */
 
@@ -13,10 +13,10 @@ USE master;
 GO
 
 -- Drop and recreate the 'BikeStoreAnalytics' database
-IF EXISTS (SELECT 1 FROM sys.database WHERE name = 'BikeStoreAnalytics')
+IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'BikeStoreAnalytics')
 BEGIN
-  ALTER DATABASE BikeStoreAnalytics SET SINGLE USER IWTH ROLLBACK IMMEDIATE;
-  DROP DATABASE BikeStoreAnalytics;
+  	ALTER DATABASE BikeStoreAnalytics SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+  	DROP DATABASE BikeStoreAnalytics;
 END;
 GO
 
@@ -31,6 +31,7 @@ GO
 CREATE SCHEMA gold;
 GO
 
+-- Creating Tables in Schema
 CREATE TABLE gold.sales_customer(
   	cst_customer_id INT,
   	cst_firstname NVARCHAR(50),
@@ -44,6 +45,7 @@ CREATE TABLE gold.sales_customer(
 );
 GO
 
+
 CREATE TABLE gold.sales_staffs (
   	stf_staff_id INT,
   	stf_firstname NVARCHAR(50),
@@ -55,6 +57,7 @@ CREATE TABLE gold.sales_staffs (
   	stf_manager_id NVARCHAR(10)
 );
 GO
+
 
 CREATE TABLE gold.sales_orders (
         od_order_id NVARCHAR(50),
@@ -68,6 +71,7 @@ CREATE TABLE gold.sales_orders (
 );
 GO
 
+
 CREATE TABLE gold.sales_order_items (
   	od_it_order_id INT,
   	od_it_item_id INT,
@@ -78,6 +82,7 @@ CREATE TABLE gold.sales_order_items (
 );
 GO
 
+
 CREATE TABLE gold.sales_stores (
   	sto_store_id INT,
   	sto_store_name NVARCHAR(50),
@@ -86,9 +91,10 @@ CREATE TABLE gold.sales_stores (
   	sto_street NVARCHAR(30),
   	sto_city NVARCHAR(20),
   	sto_state CHAR(2),
-  	sto_zipcode INT
+  	sto_zipcode NVARCHAR(30)
 );
 GO
+
 
 CREATE TABLE gold.production_categories (
 	  cat_category_id INT,
@@ -96,11 +102,13 @@ CREATE TABLE gold.production_categories (
 );
 GO
 
+
 CREATE TABLE gold.production_brands (
   	br_brand_id INT,
   	br_brand_name NVARCHAR(50)
 );
 GO
+
 
 CREATE TABLE gold.production_products (
   	pro_product_id INT,
@@ -111,6 +119,7 @@ CREATE TABLE gold.production_products (
   	pro_list_price DECIMAL(7,2)
 );
 GO
+
 
 CREATE TABLE gold.production_stocks (
   	sto_store_id INT,
