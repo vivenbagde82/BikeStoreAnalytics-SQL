@@ -6,7 +6,7 @@ Welcome to my **BikeSales SQL Data Analyst Portfolio Project**, where I demonstr
 ---
 
 ## Motivation
-This project was inspired by the amazing content of **Baraa Khatib Salkini** on [YouTube](https://www.youtube.com/watch?v=2jGhQpbzHes&t=888s) which motivated me to take a deeper dive into SQL analytics. This portfolio serves as a stepping stone for aspiring data analysts and an example of applying SQL to solve real-world business challenges.
+This project was inspired by the amazing content of [**Baraa Khatib Salkini**](https://www.linkedin.com/in/baraa-khatib-salkini/) on [YouTube](https://www.youtube.com/watch?v=2jGhQpbzHes&t=888s) which motivated me to take a deeper dive into SQL analytics. This portfolio serves as a stepping stone for aspiring data analysts and an example of applying SQL to solve real-world business challenges.
 
 ---
 
