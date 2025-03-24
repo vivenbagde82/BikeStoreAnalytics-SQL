@@ -12,7 +12,7 @@ This project was inspired by the amazing content of **Baraa Khatib Salkini** on 
 
 ## Workflow and Analysis
 
-### 0. **Database Initialization** and **Table Creation** [File Link] (scripts/00_init_database.SQL)
+### 0. **Database Initialization** and **Table Creation** [File Link] ([scripts/00_init_database.SQL](https://github.com/vivenbagde82/BikeStoreAnalytics-SQL/blob/c059a429a15ac78367097e19f4f5ba2026616ec8/scripts/00_init_database.SQL))
 - Created the **BikeSales database** and organized it into a structured schema: `gold`.
 - Set up relationships between tables to ensure data integrity.
 - Designed and created tables to store data including:
