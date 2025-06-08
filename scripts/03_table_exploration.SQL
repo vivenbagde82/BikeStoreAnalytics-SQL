@@ -21,7 +21,7 @@ FROM gold.production_brands;
 
 -- Distinct products by categories and brands
 SELECT DISTINCT 
-    pro.product_name, 
+    pro.pro_product_name, 
     br.br_brand_name, 
     cat.cat_category_name
 FROM gold.production_products pro
